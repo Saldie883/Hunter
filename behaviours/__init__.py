@@ -1,1 +1,1 @@
-from .player import Player
+from .creature import Creature
