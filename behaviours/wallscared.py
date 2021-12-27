@@ -1,4 +1,4 @@
-from behaviours import Creature
+from Behaviours import Creature
 import pygame
 
 
