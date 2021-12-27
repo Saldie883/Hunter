@@ -1,4 +1,4 @@
-from creature import Creature
+from .creature import Creature
 
 
 class Seeker(Creature):
