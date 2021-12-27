@@ -1,6 +1,6 @@
 import pygame
 from Behaviours import Creature
-from bullet import Bullet
+from .bullet import Bullet
 
 
 class Hunter(Creature):

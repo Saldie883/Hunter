@@ -1,7 +1,7 @@
-from Behaviours import Seeker, Wanderer
+from Behaviours import Seeker, Wanderer, WallScared
 
 
-class Wolf(Seeker, Wanderer):
+class Wolf(Seeker, Wanderer, WallScared):
     VIEW_RADIUS = 100
     KILL_DISTANCE = 8
     STARVATION_SPEED = 3
@@ -34,7 +34,7 @@ class Wolf(Seeker, Wanderer):
                     prey = obj
 
         wander = self.wander(dt)
-        walls = self.wach_out_wall()
+        walls = self.watch_out_wall()
 
         if prey:
             seek = self.seek(prey.pos)

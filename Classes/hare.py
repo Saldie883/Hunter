@@ -15,7 +15,7 @@ class Hare(Wanderer, CrewMember, WallScared):
     def update(self, objs, dt):
         wander = self.wander(dt)
         separate = self.separate(objs, self.VIEW_RADIUS)
-        walls = self.wach_out_wall()
+        walls = self.watch_out_wall()
 
         self.apply_force(wander * 0.4)
         self.apply_force(separate)

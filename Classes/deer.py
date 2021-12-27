@@ -1,11 +1,11 @@
 import pygame
 
-from Behaviours import Wanderer, CrewMember
-from wolf import Wolf
-from hunter import Hunter
+from Behaviours import Wanderer, CrewMember, WallScared
+from .wolf import Wolf
+from .hunter import Hunter
 
 
-class Deer(Wanderer, CrewMember):
+class Deer(Wanderer, CrewMember, WallScared):
     VIEW_RADIUS = 100
     DESIRED_SEPARATION = 20
     ALIGN_RADIUS = 50
@@ -33,7 +33,7 @@ class Deer(Wanderer, CrewMember):
         separate = self.separate(family, self.DESIRED_SEPARATION)
         align = self.align(family, self.ALIGN_RADIUS)
         cohase = self.cohase(family, self.COHESION_RADIUS)
-        walls = self.wach_out_wall()
+        walls = self.watch_out_wall()
 
         self.apply_force(wander * 0.2)
         if separate_predators.length() > 0:

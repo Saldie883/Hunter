@@ -1,9 +1,8 @@
-from abc import ABC
-from creature import Creature
+from .creature import Creature
 import pygame
 
 
-class Runner(Creature, ABC):
+class Runner(Creature):
 
     def run_away(self, target):
         desired = target - self.pos
