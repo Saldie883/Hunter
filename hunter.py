@@ -1,9 +1,9 @@
 import pygame
 
-from behaviours import Player
+from behaviours import Creature
 
 
-class Hunter(Player):
+class Hunter(Creature):
     MOVING_FORCE = 300
     BULLET_SPEED = 500
     SHOOT_DISTANCE = 400
