@@ -33,6 +33,7 @@ class Deer(Wanderer, CrewMember):
         separate = self.separate(family, self.DESIRED_SEPARATION)
         align = self.align(family, self.ALIGN_RADIUS)
         cohase = self.cohase(family, self.COHESION_RADIUS)
+        walls = self.wach_out_wall()
 
         self.apply_force(wander * 0.2)
         if separate_predators.length() > 0:
@@ -41,5 +42,7 @@ class Deer(Wanderer, CrewMember):
             self.apply_force(separate * 3)
             self.apply_force(align)
             self.apply_force(cohase)
+
+        self.apply_force(walls * 2)
 
         super().update(dt)
